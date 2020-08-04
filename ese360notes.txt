@@ -1,0 +1,11 @@
+p = 3, q = 11  p <= n
+n = 33
+z = 20 (1-p)(1-q)
+d = 7 relatively prime to z
+
+e * d = 1 mod(20)
+
+e =3
+
+21 = 1 mod(20)
+

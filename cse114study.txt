@@ -1,0 +1,15 @@
+DEEP CLONE
+
+GeometricObject copy = (GeoMetricObject)(super.clone());
+copy.dateCreated = dateCreated.clone();
+return copy;
+
+
+MIDTERM2:
+
+#1 
+-'.' means any character, '*' means any number of that character
+
+#2
+-should be test.x for an exception (there is an mistake, current has no error)
+

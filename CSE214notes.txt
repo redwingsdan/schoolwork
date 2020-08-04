@@ -1,0 +1,100 @@
+Cursor.getData() = 1st node
+Cursor.getLink().getData() = 2nd node
+
+//Every additional getLink() moves one node
+
+cursor.setLink(newNode)
+
+cursor = newNode;
+
+if(cursor == null)
+{
+	head = newNode;
+	tail = newNode;
+	cursor = newNode;
+}
+
+cursor.setLink(cursor.getLink().getLink()); // if cursor != tail
+//skips 1 node (for removal)
+
+if cursor.getLink() == null then
+cursor = tail
+
+nodePtr = head;
+
+nodePtr = nodePtr.getLink();
+
+//Essentially i = i + 1;
+
+Length of List
+
+INtNode nodePtr = head;
+int answer = 0;
+while(nodePrt!=null)
+{
+	answer++;
+	nodePtr = nodePtr.getLink();
+}
+	return answer
+
+IntNode nodePtr = head;
+while (nodePtr != null) {
+if (target == nodePtr.getData()) {
+cursor = nodePtr;
+return true;
+}
+nodePtr = nodePtr.getLink();
+}
+return false;
+}
+
+//use i = i + 1 for the nodePtr. As long as its not pointing to nothing it keeps checking
+//if the check is whatever was passed in, then the cursor goes there
+
+
+cursor.getPrev().setNext(cursor.getNext());		//to remove element @ cursor
+
+newNode.setNext(cursor.getNext());		//insert node after cursor
+newNode.setPrev(cursor);
+cursor.setNext(newNode);
+newNode.getNext().setPrev(newNode);
+
+
+
+PREFIX: ++AB*CD				-+A/*B-*CD/EFGH
+
+POSTFIX: AB+CD*+			ABCD*EF/-*G/+H-
+
+INFIX: A + B + C * D			A + B * ( C * D - E / F ) / G - H
+         2   3   1			  6   4     1   3   2     5   7
+
+
+
+Price between $1 and $100
+3 Money orders to minimize loss
+13,26,61
+
+first, second, third
+
+first - 1 = diff1
+second - first+1 = diff2
+third - first+second+1 =diff3
+100 - third+first+1 = diff4
+
+for(first=1;first<100;first++)
+{
+	diff1[first] = first - 1;
+	for(second=1;second<100;second++)
+	{
+		second - first+1 = diff2[second]
+		if(diff2[second] < realdiff2[second])
+			realdiff2[second] = diff2[second];
+		for(third=1;third<100;third++)
+		{
+			third - first+second+1 =diff3[third]
+			100 - third+first+1 = diff4[third]
+			if(diff3[second] < realdiff3[third])
+				realdiff3[third] = diff3[third];
+			if(diff4[second] < realdiff4[third])
+				realdiff4[third] = diff4[third];
+		

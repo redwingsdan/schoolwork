@@ -1,0 +1,145 @@
+public void printDirectoryTree()
+	{
+		DirectoryNode temp = new DirectoryNode();
+		temp = temp.clone(cursor);
+		DirectoryNode oldCursor = new DirectoryNode();
+		oldCursor = oldCursor.clone(cursor);
+		//cursor = root;
+		String msg = "";
+		boolean flag = false;
+		msg = msg + "|- " + cursor.getName() + "\n";
+		DirectoryNode firstCursor = new DirectoryNode();
+		firstCursor = firstCursor.clone(cursor);
+		if(cursor.getLeft() != null)
+		{
+			while(cursor.getLeft() != null)
+			{
+				oldCursor = oldCursor.clone(cursor);
+				cursor = cursor.getLeft();
+				msg = msg + "\t|- " + cursor.getName() + "\n";
+				flag = true;
+			}
+			if(flag == true)
+			{
+				cursor = cursor.clone(oldCursor);
+				flag = false;
+			}
+			//msg = msg + "\n";
+			while(cursor.getMiddle() != null)
+			{
+				oldCursor = oldCursor.clone(cursor);
+				cursor = cursor.getMiddle();
+				msg = msg + "\t|- " + cursor.getName() + "\n";
+				flag = true;
+			}
+			if(flag == true)
+			{
+				cursor = cursor.clone(oldCursor);
+				flag = false;
+			}
+		//	msg = msg + "\n";
+			while(cursor.getRight() != null)
+			{
+				oldCursor = oldCursor.clone(cursor);
+				cursor = cursor.getRight();
+				msg = msg + "\t|- " + cursor.getName() + "\n";
+				flag = true;
+			}
+			if(flag == true)
+			{
+				cursor = cursor.clone(oldCursor);
+				flag = false;
+			}
+		}
+		cursor = cursor.clone(firstCursor);
+		if(cursor.getMiddle() != null)
+		{
+			cursor = cursor.getMiddle();
+			msg = msg + "\t|- " + cursor.getName() + "\n";
+			while(cursor.getLeft() != null)
+			{
+				oldCursor = oldCursor.clone(cursor);
+				cursor = cursor.getLeft();
+				msg = msg + "\t|- " + cursor.getName() + "\n";
+				flag = true;
+			}
+			if(flag == true)
+			{
+				cursor = cursor.clone(oldCursor);
+				flag = false;
+			}
+			//msg = msg + "\n";
+			while(cursor.getMiddle() != null)
+			{
+				oldCursor = oldCursor.clone(cursor);
+				cursor = cursor.getMiddle();
+				msg = msg + "\t|- " + cursor.getName() + "\n";
+				flag = true;
+			}
+			if(flag == true)
+			{
+				cursor = cursor.clone(oldCursor);
+				flag = false;
+			}
+		//	msg = msg + "\n";
+			while(cursor.getRight() != null)
+			{
+				oldCursor = oldCursor.clone(cursor);
+				cursor = cursor.getRight();
+				msg = msg + "\t|- " + cursor.getName() + "\n";
+				flag = true;
+			}
+			if(flag == true)
+			{
+				cursor = cursor.clone(oldCursor);
+				flag = false;
+			}
+			
+		}
+		cursor = cursor.clone(firstCursor);
+		if(cursor.getRight() != null)
+		{
+			cursor = cursor.getRight();
+			msg = msg + "\t|- " + cursor.getName() + "\n";
+			while(cursor.getLeft() != null)
+			{
+				oldCursor = oldCursor.clone(cursor);
+				cursor = cursor.getLeft();
+				msg = msg + "\t|- " + cursor.getName() + "\n";
+				flag = true;
+			}
+			if(flag == true)
+			{
+				cursor = cursor.clone(oldCursor);
+				flag = false;
+			}
+			//msg = msg + "\n";
+			while(cursor.getMiddle() != null)
+			{
+				oldCursor = oldCursor.clone(cursor);
+				cursor = cursor.getMiddle();
+				msg = msg + "\t|- " + cursor.getName() + "\n";
+				flag = true;
+			}
+			if(flag == true)
+			{
+				cursor = cursor.clone(oldCursor);
+				flag = false;
+			}
+		//	msg = msg + "\n";
+			while(cursor.getRight() != null)
+			{
+				oldCursor = oldCursor.clone(cursor);
+				cursor = cursor.getRight();
+				msg = msg + "\t|- " + cursor.getName() + "\n";
+				flag = true;
+			}
+			if(flag == true)
+			{
+				cursor = cursor.clone(oldCursor);
+				flag = false;
+			}
+		}
+			cursor = temp;
+			System.out.print(msg);
+	}

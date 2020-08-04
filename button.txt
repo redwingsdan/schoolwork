@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html class=" js cssanimations csstransforms" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>the button</title>
+
+<meta content=" reddit, reddit.com, vote, comment, submit " name="keywords"></meta>
+
+<meta content="reddit: the front page of the internet" name="description"></meta>
+
+<meta content="always" name="referrer"></meta>
+
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"></meta>
+
+<link href="http://i.reddit.com/r/thebutton" media="only screen and (max-width: 640px)" rel="alternate"></link>
+
+<meta content="width=1024" name="viewport"></meta>
+
+<meta content="//www.redditstatic.com/icon.png" property="og:image"></meta>
+
+<meta content="reddit" property="og:site_name"></meta>
+
+<meta content="You probably shouldn't press it." property="og:description"></meta>
+
+<meta content="the button • /r/thebutton" property="og:title"></meta>
+
+<meta content="reddit" property="twitter:site"></meta>
+
+<meta content="summary" property="twitter:card"></meta>
+
+<meta content="the button • /r/thebutton" property="twitter:title"></meta>
+
+<link type="image/png" sizes="256x256" href="//www.redditstatic.com/icon.png" rel="icon"></link>
+
+<link type="image/x-icon" href="//www.redditstatic.com/favicon.ico" rel="shortcut icon"></link>
+
+<link href="//www.redditstatic.com/icon-touch.png" rel="apple-touch-icon-precomposed"></link>
+
+<link href="http://www.reddit.com/r/thebutton/.rss" title="RSS" type="application/rss+xml" rel="alternate"></link>
+
+<link media="all" href="//www.redditstatic.com/reddit.20gegIVDfyw.css" type="text/css" rel="stylesheet"></link>
+
+
+<link type="text/css" title="applied_subreddit_stylesheet" href="http://b.thumbs.redditmedia.com/SBG_wH3H_OhqY5SQHqLJaUrvmggtRjLMdox19ezXO4U.css" rel="stylesheet"></link>
+
+
+<link media="all" href="//www.redditstatic.com/thebutton.i-G5y6pAHNE.css" type="text/css" rel="stylesheet"></link>
+
+
+
+<script id="undefined" type="text/javascript" async="" src="http://www.google-analytics.com/plugins/ga/inpage_linkid.js"></script>
+
+<script async="" src="//www.google-analytics.com/analytics.js"></script>
+
+<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+
+<script src="//www.redditstatic.com/reddit-init.en.x4w-ae4M9dg.js" type="text/javascript"></script>
+
+
+<script id="config" type="text/javascript"></script>
+
+<script type="text/javascript"></script>
+
+<style type="text/css"></style>
+
+<script type="text/javascript"></script>
+
+<script type="text/javascript"></script>
+
+<script type="text/javascript"></script>
+
+<script type="text/javascript"></script>
+
+<link href="https://ajax.googleapis.com/ajax/static/modules/gviz/1.1/core/tooltip.css" rel="stylesheet" type="text/css"></link>
+</head>
+
+<body>
+
+<div class="thebutton-wrap active"></div>
+    <script src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['corechart']}]}" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="https://www.google.com/uds/api/visualization/1.1/8fd8705917b3fff8516953452d62ef07/ui+en.css"></link>
+    <script type="text/javascript" src="https://www.google.com/uds/api/visualization/1.1/8fd8705917b…16953452d62ef07/format+en,default+en,ui+en,corechart+en.I.js"></script>
+</div>
+
+</body>
+
+</html>

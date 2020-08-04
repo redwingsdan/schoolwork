@@ -1,0 +1,26 @@
+4 platters, 256 cylinders, 256 sectors, 128 bytes/sector
+capacity = 4platter * 2surface/platter * 256cylinders * 256sectors * 128bytes = 64MB
+
+cache hit rate 90%, memory hit rate 95%. Prob of word from disk
+(1-0.9)*(1-0.95) = 0.5%
+
+Two programs with 30% IO waiting each, CPU utilization
+1-.03 * 0.3 or 1 - p^n = 91%
+
+Swapping system where memory is holes, next fit from location
+
+Dining philosophers is array of semaphores
+
+mutex lock needs cmp register @ #1 to #0 if move mutex is #0
+
+Kernel mode disable interrupts, set time, change memory. User can read time clock
+
+Process states are running, ready, blocked
+
+If each program can access memory:
+one can run at a time, jump must be modified to new location, and might wipe out critical regions of OS
+
+Advantage of segmentation:
+handle data structures to grow and shrink, changing size of procedure does not affect other procedures
+size still cannot exceed memory space and running speed is not improved
+

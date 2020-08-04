@@ -1,0 +1,102 @@
+/* dwwi css */
+/* History:  */
+/* spf - 21 Feb 2014: Created file for v17 dwwi login and registration pages; classes based on v16 classes in dw-lc/mdw.css file */
+/* spf - 26 Mar 2014: Added dw-lc-labeloverridewidth for enterAlias.jsp to give more space for the label so it doesn't wrap */
+/*                    Added dw-lc-titlewidth920 for enterAlias.jsp to give wider title area so Russian and Spanish titles don't wrap */
+/* spf - 27 Mar 2014: Added dw-lc-oloverride for UpdateEmail.jsp to adjust the font size and line height */
+/* spf - 28 Mar 2014: Added dw-lc-errorfontsize1em to adjust the font size for error messages to match body font size */
+/* spf - 17 Nov 2014: Added dw-lc-bluemix-trial to properly align <p> */
+/* jpp - 17 Dec 2014: Added two new classes for display name page - SSO update:  dw-lc-labeloverridemargin, dw-lc-formconfirm-displayname */
+
+.dw-lc-nonemphasis {
+    font-weight: normal !important;
+}
+
+.dw-lc-formoffset {
+    margin: -10px 0 20px 185px !important;
+}
+
+.dw-lc-labeloverride {
+    display: inline !important;
+    float: none !important;
+    width: auto !important;
+}
+
+/* 26 Mar 2014 SPF: Added start */
+.dw-lc-labeloverridewidth {
+	width: 200px !important;
+}
+/* jpp 12/1714: display name page adjustment */
+.dw-lc-labeloverridemargin {
+	margin-top: 3px !important;
+}
+
+.dw-lc-titlewidth920 {
+	width: 920px !important;
+}
+/* 26 Mar 2014 SPF: Added end */
+
+/* 27 Mar 2014 SPF: Added start */
+.dw-lc-oloverride {
+	font-size: 1em !important;
+	line-height: 1em !important;
+}
+/* 27 Mar 2014 SPF: Added end */
+
+/* 28 Mar 2014 SPF: Added start */
+.dw-lc-errorfontsize1em {
+	font-size: 1em !important;
+}
+/* 28 Mar 2014 SPF: Added end */
+
+.dw-lc-formconfirm {
+	background:url(//1.w3.s81c.com/i/v17/icons/_icons/ibm_icon_blue_confirm.png) no-repeat 2px 4px;
+	margin:0px !important;
+	padding:5px 5px 5px 21px !important;
+	color:#aca899 !important;
+	margin-left:2px !important;
+	height:16px !important;
+	display:inline;
+}
+
+* + html .dw-lc-formconfirm {
+	background:url(//1.w3.s81c.com/i/v17/icons/_icons/ibm_icon_blue_confirm.png) no-repeat 2px 4px;
+	margin:0px !important;
+	padding:5px 5px 5px 21px !important;
+	color:#aca899 !important;
+	margin-left:2px !important;
+	height:16px !important;
+	display:inline;
+	margin-top:20px !important;
+}
+
+/* jpp 12/1714: display name page - Added v17 check icon */
+.dw-lc-formconfirm-displayname {
+	background:url(//1.w3.s81c.com/i/v17/icons/ibm_sprite_status_sm_blue_ON.png) no-repeat 0 -1201px;
+	margin:0 0 0 4px !important;
+	padding:0 5px 5px 21px !important;
+	color:#aca899 !important;
+	height:16px !important;
+}
+
+.dw-lc-formerror {
+	background:url(//1.w3.s81c.com/i/v17/icons/_icons/ibm_icon_alert_SM.png) no-repeat 2px 4px;
+	color: #F00;
+	/*font-size: 0.901em;*/
+	font-size: 12px;
+	margin:0px;
+	padding:5px 5px 5px 21px;
+	margin-left:0px !important;
+}
+
+.dw-lc-spacevertical {height:10px;}
+
+.dw-lc-important-adjust {/*font-size: 0.901em;*/font-size: 11px;margin-left:0px !important;}
+
+/* 17 Nov 2014 SPF: Added start */
+.dw-lc-bluemix-trial {
+	padding-left:85px !important; 
+	text-indent:-23px
+}
+/* 17 Nov 2014 SPF: Added end */
+

@@ -1,0 +1,4 @@
+copy project html
+create new jsp in netbeans
+drop html in jsp source
+change form action attribute to invoke servlet which displays params

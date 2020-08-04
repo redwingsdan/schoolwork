@@ -1,0 +1,7 @@
+.validation-error {
+	color: red;
+	font-size: 0.8em;
+	font-weight: bold;
+	animation: all 0.5s;
+	margin: 10px;
+}

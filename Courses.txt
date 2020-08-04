@@ -1,0 +1,28 @@
+CSE 219
+ESE 300
+ESE 381
+
+ESE 346
+AMS 261
+
+
+ESE 360 (346 prereq)
+ESE 333 / CSE 306 (219 prereq)
+CSE 376 (219 prereq)
+ESE 440
+ESE 441
+
+2CSE
+CSE 311 (Systems Administration)
+CSE 323 (Human Computer Interaction)
+CSE 333 (User Interface Development)
+CSE 334 (Introduction to Multimedia Systems)
+CSE 337 (Scripting Languages)
+CSE 408 (Network Security)
+CSE 409 (Computer System Security)
+
+
+ESE 325(modern sensors)
+ESE 355(VLSI)
+ESE 356(Digital System Modeling)
+ESE 343(Mobile Cloud Computing)

@@ -1,0 +1,14 @@
+MultiThreading
+Deadlock
+concurrent modification exception (crash JVM) if both threads try to access thread @ once
+Reentrant lock to fix (call locka nd unlock manually)
+or use synchronized keytword on object (Anything in that block will lock object, so only 1 thread cna use at once)
+problem is starvation, if a lot try to do one thing and one thread hogging the lock then threads starve
+ONLY SMALL BLOCKS HAVE LOCKS (So nothing gets backlogged)
+live lock is stuff is happening(infinite loop basically) so harder to catch
+
+MOSTLY CONCEPTS(SHORT ANSWER STUFF, MAYBE SOME CODE)
+For calling functions (variable is in STACK, the place in memory the data is, is in HEAP)
+Lifecycle development process
+
+2120 OLD CS SUNDAY 2PM

@@ -1,0 +1,98 @@
+-------------------------------------------------------------------------------
+--
+-- Title       : scan2key2
+-- Design      : lab04
+-- Author      : 
+-- Company     : 
+--
+-------------------------------------------------------------------------------
+--
+-- File        : c:\My_Designs\lab04\lab04\src\scan2key2.vhd
+-- Generated   : Thu Feb 26 21:34:47 2015
+-- From        : interface description file
+-- By          : Itf2Vhdl ver. 1.22
+--
+-------------------------------------------------------------------------------
+--
+-- Description : 
+--
+-------------------------------------------------------------------------------
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity ic74ls251_tb is
+end ic74ls251_tb;
+
+architecture tb_architecture of ic74ls251_tb is
+
+signal inp : std_logic_vector (7 downto 0);
+signal a : std_logic;
+signal b : std_logic;
+signal c : std_logic;
+signal strobe : std_logic;
+signal outp : std_logic;
+signal outp1 : std_logic;
+--signal s : std_logic_vector(3 downto 0);
+constant period : time := 20ns;
+
+begin
+	
+	UUT: entity ic74ls251
+		port map (inp => inp, a => a, b => b, c => c, strobe => strobe, outp => outp, outp1 => outp1
+		);
+		
+	stim: process
+		begin	  
+			
+			--for i in 0 to 255 loop
+				--(inp(7), inp(6), inp(5), inp(4), inp(3), inp(2), inp(1), inp(0)) <= (to_unsigned(i,8));
+				--(strobe, c, b, a) <= (to_unsigned(i,4));
+		--		wait for period;
+		--	end loop;
+		--wait;
+
+	--	 strobe <= '1';	
+	--	 wait for period;  
+	inp(0) <= '0';
+	inp(1) <= '1';
+	inp(2) <= '0';
+	inp(3) <= '1';
+	inp(4) <= '0';
+	inp(5) <= '1';
+	inp(6) <= '0';
+	inp(7) <= '1';
+	
+		for i in 0 to 7 loop	
+			strobe <= '0';	
+			--(inp(7), inp(6), inp(5), inp(4), inp(3), inp(2), inp(1), inp(0)) <= (to_unsigned(i,8));
+			(a,b,c) <= (to_unsigned(i,3));
+		
+			--inp(i) <= b;
+			wait for period;
+		end loop;
+		
+		
+			inp(0) <= '0';
+	inp(1) <= '1';
+	inp(2) <= '1';
+	inp(3) <= '1';
+	inp(4) <= '0';
+	inp(5) <= '1';
+	inp(6) <= '0';
+	inp(7) <= '0';
+	
+		for i in 0 to 7 loop	
+			strobe <= '0';	
+			--(inp(7), inp(6), inp(5), inp(4), inp(3), inp(2), inp(1), inp(0)) <= (to_unsigned(i,8));
+			(a,b,c) <= (to_unsigned(i,3));
+		
+			--inp(i) <= b;
+			wait for period;
+		end loop;
+		
+		
+		wait;
+		end process;
+	end tb_architecture;
+	

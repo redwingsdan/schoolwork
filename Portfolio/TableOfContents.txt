@@ -1,0 +1,13 @@
+ESE333_HW1.doc = Homework 1 - Grade = 108 / 120
+ESE333_HW2.docx = Homework 2 - Grade = 143 / 180
+ESE333_HW3.docx = Homework 3 - Grade = 136 / 140
+ESE333_HW4.docx = Homework 4 - Grade = 188 / 190
+ESE333_HW5.docx = Homework 5 - Grade = 146 / 160
+ESE333_HW6.docx = Homework 6 - Grade = 88 / 100
+project1.cpp = Project 1 code - Grade = 70 / 110
+project2.cpp = Project 2 code - Grade = 110 / 130
+README_PROJECT1.txt = Readme for project 1
+README_PROJECT2.txt = Readme for project 2
+Midterm - Grade = 71 / 100
+
+Total = 1060 / 1230

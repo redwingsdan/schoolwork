@@ -1,0 +1,22 @@
+/* 2014 0710 jpp */
+/* 
+ * CSS file for ibm.com developerWorks - Masthead and Footer CSS (v17) - Minimal
+ * Copyright (c) 2013 IBM Corporation
+ * Owner: developerWorks Content/Raleigh/IBM (jpp)
+ * Recent changes:  Update for local site support
+ */
+/* Masthead */
+#dw-masthead-top-row { border-bottom: 0px solid #444444; }
+#dw-masthead-top-row #ibm-mast-options-dw { margin: 0 !important; }
+#dw-masthead-top-row li#dw-mast-top-3 a.current, #dw-masthead-top-row li#dw-mast-top-3 a:hover,
+#dw-masthead-top-row li#dw-mast-top-3 a { background: none; }
+#ibm-universal-nav-dw { border-top: none !important; }
+#ibm-universal-nav-dw #ibm-unav-links-dw { margin: 0 !important; padding: 0 !important; }
+#dw-masthead-top-row li#dw-mast-top-3, #dw-masthead-top-row li#dw-mast-top-4 { padding: 0 !important; border: none !important; }
+/* Footer */
+#ibm-footer-module-dw .dw-footer-col-6-5 { width: 160px; }
+#ibm-footer-module-dw .dw-footer-col-6-6 { width: 60px; }
+#ibm-footer-module-dw .dw-footer-col-6-6 img { padding-top: 3px; }
+.dw-footer-min-align-row { margin-top: 2px; }
+/* IE 7 */
+*:first-child+html #ibm-footer-module-dw .dw-footer-col-6-1 { width: 160px; margin-left: 106px; }

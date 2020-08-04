@@ -1,0 +1,81 @@
+-- Design      : lab04
+-- Author      : 
+-- Company     : 
+--
+-------------------------------------------------------------------------------
+--
+-- File        : c:\My_Designs\lab04\lab04\src\scan2key2.vhd
+-- Generated   : Thu Feb 26 21:34:47 2015
+-- From        : interface description file
+-- By          : Itf2Vhdl ver. 1.22
+--
+-------------------------------------------------------------------------------
+--
+-- Description : 
+--
+-------------------------------------------------------------------------------
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity ic74ls251 is
+	port(
+	inp : in std_logic_vector (7 downto 0);
+	a : in std_logic;
+	b : in std_logic;
+	c : in std_logic;
+	strobe : in std_logic;
+	outp : out std_logic
+	--outp1 : out std_logic
+	);
+end ic74ls251;
+
+architecture ic74ls251_beh of ic74ls251 is	 
+signal outp1 :std_logic;   
+begin 	
+	signal s <= std_logic_vector(a,b,c);
+	process(select, strobe, inp)
+	begin
+if(strobe = '1') then
+outp <= 'Z';
+else
+		case s is
+			when "000" => outp <= inp(0);
+			when "001" => outp <= inp(1);
+			when "010" => outp <= inp(2);
+			when "011" => outp <= inp(3);
+			when "100" => outp <= inp(4);
+			when "101" => outp <= inp(5);
+			when "110" => outp <= inp(6);
+			when others => outp <= inp(7);
+				 
+	end case;
+end if;
+end process;
+
+	
+	--outp <= 'Z' when '1',
+	--'-' when others;	   
+	
+--	keyscan: process (strobe)
+--	begin		
+
+--	if(strobe = '1') then
+--	outp <= 'Z'; 
+--	else 
+--	outp <= 'W';
+--	 end if;
+--end process keyscan;
+
+--	with std_logic_vector'(a,b,c) select
+--	outp <= inp(0) when (s = "000") else
+--	inp(1) when (s = "001")else
+--	inp(2) when (s = "010")else
+--	inp(3) when (s = "011")else
+--	inp(4) when (s = "100")else
+--	inp(5) when (s = "101")else
+--	inp(6) when (s = "110")else
+--	inp(7);
+
+
+	
+	end ic74ls251_beh;

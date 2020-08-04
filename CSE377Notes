@@ -1,0 +1,23 @@
+JSP > servlets
+<%= %> expression
+<@ %> page import
+insert code
+can use predefined variables
+evaluation at runtime
+used to import classes, include file contents, specify type
+page directives can import classes, mime content
+import, contenttype, isthreadseafe, session, buffer, autoflush, extends
+EL better than JSP
+implicit objects: request, response, out, session, application, config, pagecontext, page
+
+Shared scope: servletcontext, session, request, page
+get session data from request.getSession().function
+2 or more threads can access same object
+
+jspwriter out = getjspcontext.getout
+jspfragment f= getjspbody
+set<map> s = items.entry
+for(mapentry me : s)
+getjstpcontext.setattribute("value", me.key)
+if(f != null)
+f.invoke(out)

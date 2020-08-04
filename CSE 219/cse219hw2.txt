@@ -1,0 +1,25 @@
+Scene set cursor
+moving cursor, select cursor
+
+use canvas or pane for workspace
+
+datastructure vector arraylist of things rendered and select the one on top
+
+javafx color picker
+
+paint object for color
+
+save to JSON (look at HW1 solution) saving shapes and their colors, fill, outline thickness, location, width and height
+center x and y and radius width and height SAVED AND LOADED TO BE RENDERED
+
+snapshot to save b/c javafx node class has snapshot method to give a writeable image to put to file
+
+
+
+
+
+SAVE/LOAD/EXPORT
+
+WARNINGS
+
+LOCK TO PANE

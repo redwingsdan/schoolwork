@@ -1,0 +1,33 @@
+public static int largest(int[] a){
+
+if(a.length == 1)
+return a[0];
+
+int [] b = new int[a.length-1];
+System.arrayCopy(a,1,b,0,a.length-1);
+int largestTail = largest(b);
+
+if(a[0] > largestTail)
+return a[0];
+
+else
+return largestTail;
+
+}
+
+public static void main(String[] args)
+{
+System.out.println(largest(new int[]{6,3,8,1,0}));
+}
+}
+
+public static int num(int n)
+if(n<10)
+return n;
+return n%10 + sum(n/10);
+
+public static void main(String[] args)
+{
+System.out.println(sum(1234567));
+}
+}

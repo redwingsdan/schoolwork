@@ -1,0 +1,153 @@
+Configuration
+ldi r0, 0
+ldi r5, 1
+clt
+Initialize menu //Mode Select
+//	-------------------
+//	____(hold,cap,run,alarm)
+
+brtc menu
+
+ldi r16, $01
+cp r5, r16
+breq run 
+ldi r16, $02
+cp r5, r16
+breq hold
+ldi r16, $03
+cp r5, r16
+breq capture
+
+//////////////////////////////////////////
+Initialize run:
+read
+transform
+output
+####VDC
+----
+RUN	AVM5
+rjmp run
+//////////////////////////////////////////
+Initialize hold:
+output
+####VDC
+-----
+HOLD	AVM5
+rjmp hold
+//////////////////////////////////////////
+Initialize capture
+read 
+transform
+output
+####VDC
+-------
+Capture	AVM5
+audio
+capture-0
+rjmp capture
+//////////////////////////////////////////
+isr:
+
+read PIND
+and with $E0
+debounce
+check again
+
+sbis portd, 7		//go
+rjmp toggleoutput
+
+sbis portd, 6		//right
+rjmp toggleleft
+
+sbis portd, 5		//left
+rjmp toggleright
+rjmp isr
+///////////////////////////////////////////
+toggleoutput:
+
+com r0
+ldi r16, $01
+cp r0, r16
+brne menu
+set
+/*
+ldi r16, $01
+cp r5, r16
+breq run 
+ldi r16, $02
+cp r5, r16
+breq hold
+ldi r16, $03
+cp r5, r16
+breq capture
+*/
+rjmp end
+///////////////////////////////////////////
+toggleleft:
+
+dec r5
+breq zero
+returnspot:
+
+ldi r16, $01
+cp r5, r16
+breq rundisplay
+ldi r16, $02
+cp r5, r16
+breq holddisplay
+ldi r16, $03
+cp r5, r16
+breq capturedisplay
+rjmp toggleleft
+
+zero:
+ldi r5, 3
+rjmp returnspot
+////////////////////////////////////////////
+toggleright:
+
+inc r5
+ldi r16, $04
+cp r5, r16
+breq zero
+returnspot1:
+
+ldi r16, $01
+cp r5, r16
+breq rundisplay
+ldi r16, $02
+cp r5, r16
+breq holddisplay
+ldi r16, $03
+cp r5, r16
+breq capturedisplay
+rjmp toggleright
+
+zero:
+ldi r5, 0
+rjmp returnspot1
+/////////////////////////////////////////////
+rundisplay:
+//	Mode Select
+//	-------------------
+//	Run(cap,hold,alarm)
+rcall updating_lcd
+rjmp end
+/////////////////////////////////////////////
+holddisplay:
+//	Mode Select
+//	-------------------
+//	Hold(cap,run,alarm)
+
+rcall updating_lcd
+rjmp end
+/////////////////////////////////////////////
+capturedisplay:
+//	Mode Select
+//	-------------------
+//	Capture(hold,run,alarm)
+rcall updating_lcd
+rjmp end
+/////////////////////////////////////////////
+end:
+reti

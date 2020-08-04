@@ -1,0 +1,37 @@
+	library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity ring_enc is
+ port(
+ clk : in std_logic;     -- clock
+ rst_bar : in std_logic; -- reset, active low synchronous
+ enable : in std_logic;  -- enable, active high
+ code : out std_logic_vector(1 downto 0)   -- output code
+     );
+end ring_enc;			  
+
+architecture behavior of ring_enc is
+signal q : std_logic_vector(3 downto 0); 
+begin
+process(clk, rst_bar, q)
+begin
+	if (rst_bar = '0') then
+		q <="1110";
+	elsif (rst_bar ='1' and rising_edge(clk) and enable = '1') then
+		q(0) <= q(3);
+		q(1) <= q(0);
+		q(2) <= q(1);
+		q(3) <= q(2);
+	else
+		null;
+end if;	
+
+end process;
+
+process(q)
+begin
+	--encoder
+	
+end process;
+end behavior;

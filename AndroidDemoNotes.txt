@@ -1,0 +1,17 @@
+res = resources for app
+drawable = images
+layout = javafx GUI
+menu = manu stuff
+mipmap = HD images
+values = defining strings and dimensions
+Android Manifest = permissions, names, intent filters, icons
+
+onStart = start
+onCreate = main - (bundle - dictionary which saves how much something happened)
+onPause = phone call, pause
+onStop = move off screen to another
+1onDestroy = kill app
+2onResume = return back to app
+onStart = after restart
+
+Threading required for app to load in reasonable time

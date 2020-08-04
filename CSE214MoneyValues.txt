@@ -1,0 +1,34 @@
+The three numbers are 16, 33, and 51
+
+The goal is to find the maximum loss while using these three money values. There are 7 different
+states where money can be lost:
+
+State 1: price between $1 and first value
+State 2: price between first value and second value
+State 3: price greater than second value, less than third value, and within $firstvalue of the second value
+State 4: price greater than second value, less than third value and greater than $firstvalue of the second value
+State 5: price greater than third value and within $firstvalue of the third value
+State 6: price greater than third value and greater than $firstvalue but within $secondvalue of the third value
+State 7: price greater than third value and greater than $secondvalue.
+
+Using my numbers as an example:
+
+$1 = state 1 because 1 < 16
+$17 = state 2 because 16 < 17 < 33
+$34 = state 3 because 33 < 34 < (16+33) < 51
+$50 = state 4 because 33 < (16+33) < 50 < 51
+$52 = state 5 because 51 < 52 < (51+16)
+$68 = state 6 because 51 < (51+16) < 68 < (51+33)
+$85 = state 7 because 51 < (51+33) < 85 < 100
+
+Using these values, we can obtain the maximum loss from each state:
+
+State 1 = $15
+State 2 = $16
+State 3 = $15
+State 4 = $1
+State 5 = $15
+State 6 = $16
+State 7 = $15
+
+So the maximum loss incurred is $16. This appears to be the lowest loss based on repeated attempts with alternative numbers.
